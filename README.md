@@ -1,4 +1,4 @@
-# Atividade 3 - Computaão Gráfica UFABC
+# Atividade 3 - Computação Gráfica UFABC
 
 
 
