@@ -388,13 +388,26 @@ void OpenGLWindow::renderCube()
 }
 
 void OpenGLWindow::resizeGL(int width, int height) {
- 
+
 
 }
 
 void OpenGLWindow::terminateGL() {
 
+glDeleteVertexArrays(1, &planeVAO);
+	glDeleteVertexArrays(1, &cubeVAO);
+	glDeleteVertexArrays(1, &quadVAO);
+	
+	glDeleteBuffers(1, &planeVBO);
+	glDeleteBuffers(1, &cubeVBO);
+	glDeleteBuffers(1, &quadVBO);
 
+	glDeleteFramebuffers(1, &depthMapFBO);
+	glDeleteTextures(1, &depthCubeMap);
+
+	glDeleteShader(m_shadowProgram);
+	glDeleteShader(m_depthProgram);
+	ImGui_ImplOpenGL3_Shutdown();
 }
 
 
