@@ -69,6 +69,7 @@ Recebe um GLuint programId responsável por identificar qual a shader que está 
 ActiveTexture(GL_TEXTURE0);
 glBindTexture(GL_TEXTURE_2D, boxTexture);
 
+
 E cria a matriz referente ao respectivo cubo
 
 	model = glm::mat4(1.0f);
@@ -85,6 +86,49 @@ E cria a matriz referente ao respectivo cubo
 
 O método já inicia criando cada uma das faces do cubo, na variável float vertices[]. Além disso são criados o Array Vertex e cubeVBO. Foi utilizado um VBO e VAO somente para os cubos e outro somente para o cubemap.
 
+## Camera
+
+### GetViewMatrix()
+
+Seta qual será a matriz de visualização a cada cena.
+
+### ProcessKeyboard
+
+Processa os movimentos realizados no teclado e que foram capturados pelo eventhandler na openwindow.cpp
+
+Ele seta qual será a velocidade do movimento: float velocity = MovementSpeed * deltaTime;
+E adiciona ou remove valores a variavel Position de acordo com o tipo de movimento realizado e velocidade estabelecida
+
+  if (direction == FORWARD)
+        Position += Front * velocity;
+    if (direction == BACKWARD)
+        Position -= Front * velocity;
+    if (direction == LEFT)
+        Position -= Right * velocity;
+    if (direction == RIGHT)
+        Position += Right * velocity;
+
+### ProcessMouseMovement
+
+Processa os movimentos do mouse modificando as variáveis 
+    Yaw += xoffset;
+    Pitch += yoffset;
+    
+e chama o UpdateCameraVectors() que atualizará cada um dos critério utilizados na matriz de visualização.
+
+###  UpdateCameraVectors
+
+Atualiza as varíaveis
+
+    Front = glm::normalize(front);
+    Right = glm::normalize(glm::cross(Front, WorldUp));
+    Up = glm::normalize(glm::cross(Right, Front));
+    
+ que são utilizadas no GetViewMatrix(), chamado a cada cena para setar a visualização da camera.
+ 
+ ## itoa.h
+ 
+ Biblioteca externa usada para converter inteiro em char*
 
 ## Author
 
