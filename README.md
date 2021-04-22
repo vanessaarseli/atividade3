@@ -130,6 +130,8 @@ Atualiza as varíaveis
  
  Biblioteca externa usada para converter inteiro em char*
  
+ <iframe width="560" height="315" src="https://www.youtube.com/embed/CCF2DYq4Da0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+ 
 #### Credits
     Source Code:
                 https://learnopengl.com/
