@@ -129,6 +129,11 @@ Atualiza as varíaveis
  ## itoa.h
  
  Biblioteca externa usada para converter inteiro em char*
+ 
+#### Credits
+    Source Code:
+                https://learnopengl.com/
+                https://github.com/hbatagelo/abcg
 
 ## Author
 
