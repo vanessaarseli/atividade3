@@ -81,6 +81,10 @@ E cria a matriz referente ao respectivo cubo
  
    renderCube();
 
+### RenderCube
+
+O método já inicia criando cada uma das faces do cubo, na variável float vertices[]. Além disso são criados o Array Vertex e cubeVBO. Foi utilizado um VBO e VAO somente para os cubos e outro somente para o cubemap.
+
 
 ## Author
 
