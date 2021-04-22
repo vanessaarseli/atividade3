@@ -17,7 +17,7 @@
 #include <regex>
 #include <sstream>
 #include <string_view>
-
+#include <GL/gl.h>
 #include "SDL_events.h"
 #include "SDL_video.h"
 #include "abcg_application.hpp"
